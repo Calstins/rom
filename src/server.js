@@ -1,4 +1,4 @@
-import 'dotenv/config'
+import 'dotenv/config';
 
 import express from 'express';
 import configViewEngine from './config/configEngine';
@@ -24,17 +24,16 @@ configViewEngine(app);
 // init Web Routes
 routes.initWebRouter(app);
 
-// Cron game 1 Phut 
+// Cron game 1 Phut
 cronJobContronler.cronJobGame1p(io);
 
-// Check xem ai connect vào sever 
+// Check xem ai connect vào sever
 socketIoController.sendMessageAdmin(io);
 
 // app.all('*', (req, res) => {
-//     return res.render("404.ejs"); 
+//     return res.render("404.ejs");
 // });
 
 server.listen(port, () => {
-    console.log("Connected success port: " + port);
+  console.log('Connected success port: ' + port);
 });
-
